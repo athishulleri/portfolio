@@ -364,7 +364,7 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script>
+    <!-- <script>
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
@@ -381,7 +381,32 @@
                 }
             })
         })
-    </script>
+    </script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+ 
+  <!--form validation-->
+ <script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbyt88FQCggqb2CdcIPr6TAAlpRZVN7S36QS6Ouxj91RrYLHIfqrF8xFuQZQBDifnBH8/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+    
 </body>
 
 </html>
